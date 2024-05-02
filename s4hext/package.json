@@ -1,0 +1,30 @@
+{
+  "name": "s4hext",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@sap-cloud-sdk/generator": "^3.14.0",
+    "@sap/cds": "^7",
+    "express": "^4",
+    "@sap/xssec": "^3"
+  },
+  "devDependencies": {
+    "@cap-js/sqlite": "^1",
+    "@sap/cds-dk": "^7"
+  },
+  "scripts": {
+    "start": "cds-serve"
+  },
+  "cds": {
+    "requires": {
+      "OP_API_SALES_ORDER_SRV_0001": {
+        "kind": "odata-v2",
+        "model": "srv/external/OP_API_SALES_ORDER_SRV_0001"
+      },
+      "auth": "xsuaa"
+    }
+  }
+}
